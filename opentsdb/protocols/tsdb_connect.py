@@ -10,6 +10,7 @@ class TSDBConnect:
         self.tsdb_host = host
         self.tsdb_port = int(port)
         self._connect = None
+        self.compression = None
 
         if check_tsdb_alive:
             self.is_alive(raise_error=True)
